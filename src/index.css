@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 230 30% 18%;
+    --card: 40 33% 96%;
+    --card-foreground: 230 30% 18%;
+    --popover: 40 33% 96%;
+    --popover-foreground: 230 30% 18%;
+    --primary: 230 30% 18%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 200 20% 45%;
+    --secondary-foreground: 40 33% 97%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 230 10% 45%;
+    --accent: 30 60% 55%;
+    --accent-foreground: 40 33% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 200 20% 45%;
+    --radius: 0.75rem;
+
+    /* Custom palette - vintage nature */
+    --sky-mist: 205 60% 90%;
+    --sky-mid: 200 70% 72%;
+    --sky-sunset: 28 90% 72%;
+    --mountain-ink: 230 30% 18%;
+    --mountain-mid: 220 15% 40%;
+    --mountain-light: 215 20% 60%;
+    --river-teal: 195 35% 45%;
+    --river-light: 195 40% 65%;
+    --sunset-gold: 45 80% 70%;
+    --paper-base: 40 33% 97%;
+    --paper-warm: 38 40% 95%;
+    --terracotta: 25 55% 50%;
+    --forest-green: 150 30% 35%;
+    --forest-light: 140 25% 55%;
+    --ocean-deep: 210 50% 30%;
+    --ocean-mid: 200 45% 50%;
+    --ocean-light: 195 50% 70%;
+    --sand: 38 40% 78%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Instrument Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-body {
+    font-family: 'Instrument Sans', sans-serif;
+  }
+  .font-mono-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant: small-caps;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+  .paper-texture {
+    background-color: hsl(var(--paper-base));
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+  .garden-bg {
+    background: linear-gradient(180deg, 
+      hsl(var(--forest-light) / 0.2) 0%, 
+      hsl(var(--paper-warm)) 20%, 
+      hsl(var(--paper-base)) 100%
+    );
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--paper-base));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--mountain-light));
+  border-radius: 3px;
+}
