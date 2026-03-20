@@ -17,6 +17,12 @@ import {
   ContactContent,
 } from "@/components/SectionContents";
 import { portfolioData } from "@/data/portfolioData";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem
+} from "@/components/ui/dropdown-menu";
 
 type SectionKey = "about" | "skills" | "experience" | "certifications" | "projects" | "education" | "interests" | "contact" | null;
 
@@ -319,6 +325,22 @@ const Index = () => {
       >
         {ContentComponent && <ContentComponent />}
       </GardenModal>
+
+      {/* Dropdown menu in top-right corner */}
+      <div className="fixed top-4 right-4 z-50">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button className="px-4 py-2 rounded-md bg-mountain-ink text-paper-base shadow-lg hover:bg-mountain-mid transition">Sections</button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            {Object.entries(sectionTitles).map(([key, title]) => (
+              <DropdownMenuItem key={key} onClick={() => openSection(key as SectionKey)}>
+                {title}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </>
   );
 };
