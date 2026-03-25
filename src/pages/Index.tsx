@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import mountainsBg from "@/assets/mountains-bg.png";
 import riverBg from "@/assets/river-bg.png";
 import oceanBg from "@/assets/ocean-bg.png";
-import profileImg from "@/assets/profile.jpeg.png";
+import profileImg from "@/assets/profile.jpeg";
 import { Cloud, FlyingBirdLabel, SmallBird, AnimatedWaves, FloatingLeaf, Butterfly } from "@/components/SceneSVGs";
 import GardenModal from "@/components/GardenModal";
 import {
