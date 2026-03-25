@@ -124,7 +124,7 @@ export const ContactContent = () => (
         <span className="font-body text-sm text-mountain-ink">{portfolioData.contact.email}</span>
       </a>
       <a
-        href={`https://${portfolioData.contact.linkedin}`}
+        href={portfolioData.contact.linkedin}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-3 p-3 rounded-md bg-ocean-mid/10 border border-ocean-mid/20 hover:bg-ocean-mid/20 transition-colors"
